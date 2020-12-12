@@ -9,7 +9,7 @@ if [ -d "$user" ]; then
 	echo "This user already exists" >&2
 	exit 2
 elif [ ! -d "$user" ]; then
-	mkdir "user" && touch "$user"/wall "$user"/friends
+	mkdir "$user" && touch "$user"/wall "$user"/friends
 	echo "User created successfully"
 	exit 0
 fi
