@@ -4,7 +4,7 @@ if [ "$#" -ne 1 ]; then
 	echo "There is an error with this parameter" >&2
 	exit 1
 fi
-user= "$1"
+user="$1"
 if [ -d "$user" ]; then
 	echo "This user already exists" >&2
 	exit 2
