@@ -13,9 +13,9 @@ elif ! [ -d "$receiver" ]; then
 elif ! [ -d "$sender" ]; then
 	echo "Sender does not exist" >&2
 	exit 3
-elif ! [ -e ~/project-JasonBallantyne/"$receiver"/friends/"$sender" ]; then
+elif ! grep -Fxq "$sender" "$receiver"/friends; then
 	echo "Sender is not a friend of receiver" >&2
-	exit 4
+	exit 4 
 else
 	echo "$message" >> "$receiver"/wall
 	echo "Message has been sent successfully"
