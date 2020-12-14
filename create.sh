@@ -1,15 +1,15 @@
 #!/bin/bash
 
 if [ "$#" -ne 1 ]; then
-	echo "There is an error with this parameter" >&2
+	echo "Error: parameters problem" >&2
 	exit 1
 fi
 user="$1"
 if [ -d "$user" ]; then
-	echo "This user already exists" >&2
+	echo "Error: user already exists" >&2
 	exit 2
 elif [ ! -d "$user" ]; then
 	mkdir "$user" && touch "$user"/wall "$user"/friends
-	echo "User created successfully"
+	echo "OK: user created"
 	exit 0
 fi
