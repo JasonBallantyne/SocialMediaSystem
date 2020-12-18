@@ -1,12 +1,14 @@
 #!/bin/bash
 # Error checking is done within the respective script it calls
 
+mkfifo server.pipe
+
 while true; do
-	read -a arr;
-	request="${arr[0]}";
+	read -a request < server.pipe
+
+
 	case "$request" in
 		create)
-			echo "${arr[@]:1}"
 			./create.sh "${arr[@]:1}"
 			;;
 		add)
