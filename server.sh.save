@@ -1,0 +1,24 @@
+#!/bin/bash
+
+while true; do
+	case "$request" in
+		create)
+			# do something
+			;;
+		add)
+			# do something
+			;;
+		post)
+	./		# do something
+			;;
+		show)
+			# do something
+			;;
+		shutdown)
+			# do something
+			;;
+		*)
+			echo "Error: bad request"
+			exit 1
+	esac
+done
