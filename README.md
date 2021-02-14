@@ -1,4 +1,4 @@
-# SocialMediaSystem_COMP30640
+# SocialMediaSystem
 This is a report based on a basic social media system I have implemented in bash over the course of Winter 2020. 
 
 It is comprised of a create.sh, add.sh, post.sh, show.sh, P.sh, V.sh, client.sh, and server.sh. 
